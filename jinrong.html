@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>金融行业解决方案架构图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Microsoft YaHei", "思源黑体", sans-serif;
+            background: #f5f7fa;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .page {
+            width: 1200px;
+            background: #fff;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+        .title {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            color: #333;
+        }
+        .section {
+            margin-bottom: 16px;
+        }
+        .section-head {
+            font-size: 14px;
+            font-weight: bold;
+            padding: 8px 12px;
+            background: #f0f5ff;
+            border-left: 4px solid #3b82f6;
+            margin-bottom: 8px;
+        }
+        .access-row {
+            display: flex;
+            gap: 10px;
+        }
+        .access-item {
+            flex: 1;
+            padding: 12px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 13px;
+        }
+        .business-row {
+            display: flex;
+            gap: 10px;
+        }
+        .business-item {
+            flex: 1;
+            padding: 12px;
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 13px;
+        }
+        .middle-wrap {
+            display: flex;
+            gap: 12px;
+        }
+        .capability {
+            flex: 3;
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 4px;
+            padding: 12px;
+        }
+        .capability-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            padding-left: 4px;
+        }
+        .capability-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+        }
+        .capability-item {
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 13px;
+        }
+        .security {
+            flex: 1;
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            border-radius: 4px;
+            padding: 12px;
+        }
+        .security-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            padding-left: 4px;
+        }
+        .security-list {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .security-item {
+            padding: 8px;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 12px;
+        }
+        .infra-section {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            padding: 12px;
+        }
+        .infra-head {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            padding-left: 4px;
+        }
+        .infra-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 6px;
+        }
+        .infra-item {
+            padding: 8px;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+    <div class="title">金融行业解决方案架构 - 完整视图</div>
+
+    <!-- 接入层 -->
+    <div class="section">
+        <div class="section-head">接入层</div>
+        <div class="access-row">
+            <div class="access-item">网上银行</div>
+            <div class="access-item">手机银行APP</div>
+            <div class="access-item">微信/支付宝小程序</div>
+            <div class="access-item">开放平台API</div>
+            <div class="access-item">线下网点终端</div>
+        </div>
+    </div>
+
+    <!-- 业务平台层 -->
+    <div class="section">
+        <div class="section-head" style="background:#fffbeb;border-left-color:#f59e0b;">业务平台层</div>
+        <div class="business-row">
+            <div class="business-item">零售银行平台</div>
+            <div class="business-item">财富管理平台</div>
+            <div class="business-item">信贷管理平台</div>
+            <div class="business-item">支付结算平台</div>
+            <div class="business-item">运营管理平台</div>
+        </div>
+    </div>
+
+    <!-- 平台能力 + 安全 并排层 -->
+    <div class="section">
+        <div class="middle-wrap">
+            <div class="capability">
+                <div class="capability-title">平台能力层</div>
+                <div class="capability-grid">
+                    <div class="capability-item">账户服务</div>
+                    <div class="capability-item">支付服务</div>
+                    <div class="capability-item">风控服务</div>
+                    <div class="capability-item">营销服务</div>
+                    <div class="capability-item">数据服务</div>
+
+                    <div class="capability-item">信贷服务</div>
+                    <div class="capability-item">理财服务</div>
+                    <div class="capability-item">清算服务</div>
+                    <div class="capability-item">鉴权服务</div>
+                    <div class="capability-item">报表服务</div>
+
+                    <div class="capability-item">积分服务</div>
+                    <div class="capability-item">合约服务</div>
+                    <div class="capability-item">智能投顾</div>
+                    <div class="capability-item">反欺诈服务</div>
+                    <div class="capability-item">监管上报</div>
+                </div>
+            </div>
+            <div class="security">
+                <div class="security-title">安全防护层</div>
+                <div class="security-list">
+                    <div class="security-item">数据加密与隐私保护</div>
+                    <div class="security-item">反欺诈与智能风控</div>
+                    <div class="security-item">DDoS高防</div>
+                    <div class="security-item">Web应用防火墙(WAF)</div>
+                    <div class="security-item">等保合规与审计</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 基础建设层 -->
+    <div class="section">
+        <div class="infra-section">
+            <div class="infra-head">基础建设层</div>
+            <div class="infra-grid">
+                <div class="infra-item">云服务器</div>
+                <div class="infra-item">数据库集群</div>
+                <div class="infra-item">对象存储</div>
+                <div class="infra-item">CDN加速</div>
+                <div class="infra-item">消息队列</div>
+                <div class="infra-item">容器引擎</div>
+                <div class="infra-item">负载均衡</div>
+                <div class="infra-item">BGP网络</div>
+                <div class="infra-item">区块链服务</div>
+                <div class="infra-item">大数据计算</div>
+                <div class="infra-item">分布式缓存</div>
+                <div class="infra-item">时序数据库</div>
+                <div class="infra-item">专线接入</div>
+                <div class="infra-item">安全态势感知</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
